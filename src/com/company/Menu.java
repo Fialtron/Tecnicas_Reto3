@@ -28,7 +28,7 @@ public class Menu {
                         System.out.print("Estas en opcion 2");
                         break;
                     case 3:
-                        System.out.print("Estas en opcion 3");
+                        new Matrix();
                         break;
                     case 4:
                         System.out.print("Hasta luego!");
