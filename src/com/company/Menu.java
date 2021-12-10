@@ -22,7 +22,7 @@ public class Menu {
                 option = Integer.parseInt(sc.next());
                 switch (option) {
                     case 1:
-                        System.out.print("Estas en opcion 1");
+                        new Notas();
                         break;
                     case 2:
                         System.out.print("Estas en opcion 2");
