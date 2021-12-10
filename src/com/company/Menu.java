@@ -1,10 +1,13 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Menu {
     boolean exit = false;
     int option;
+    int [] vec1 = new int[] { 1,2,3,4 };
+    int [] vec2 = new int[] { 4,2,3,1 };
 
     public Menu() {
         this.menu();
@@ -25,7 +28,7 @@ public class Menu {
                         System.out.print("Estas en opcion 1");
                         break;
                     case 2:
-                        System.out.print("Estas en opcion 2");
+                        scalarProduct(vec1,vec2);
                         break;
                     case 3:
                         new Matrix();
@@ -40,6 +43,21 @@ public class Menu {
             } catch (NumberFormatException ex ){
                 System.out.println("Inserte un numero valido. Por favor intente nuevamente\n\n");
             }
+        }
+    }
+
+    private void scalarProduct(int v1[], int v2[]) {
+        System.out.println("Primer vector" + Arrays.toString(v1));
+        System.out.println("Segundo vector" + Arrays.toString(v2));
+
+        if(v1.length != v2.length){
+            System.out.println("Los vectores deben tener la misma dimension");
+        }else{
+            int result = 0;
+            for (int i = 0; i < v1.length; i++) {
+                result = result + v1[i] * v2[i];
+            }
+            System.out.println("El producto escalar es: " + result);
         }
     }
 }
